@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+
+@keyframes fadeInFromNone{
+0%{
+display:none;
+opacity:0;}
+1%{
+display:block;
+opacity:0;}
+100%{
+display:block;
+}
+}
+
+
+@keyframes animate{
+0%{
+width:0;
+}
+100%{
+width:95%;
+}
+
+}
+
+.image img{ 
+
+object-fit: contain;
+animation:fadeInFromNone 40s ease-out;
+width:100%;
+height:100vh;
+
+
+}
+
+
+
+.slogan h1{
+z-index:-1;
+position:absolute;
+color:black;
+top:65%;
+left:50%;
+translate:-50% -65%;
+
+}
+.loading{
+z-index:-1;
+height:100px;
+width:100px;
+border: 6px solid aqua;
+border-radius:4px;
+box-shadow:0 0 8px aqua, 0 0 8px aqua inset;
+position:absolute;
+top:50%;
+left:50%;
+translate:-50% -50%;
+z-index:-1;
+animation:2s loading ease-in-out infinite;
+}
+
+@keyframes loading{
+0%{
+transform:rotateX(0) rotateY(0) rotate(0);
+
+}
+33%{
+transform:rotateX(180deg) rotateY(0) rotate(0);
+}
+67%{
+transform:rotateX(180deg) rotateY(180deg) rotate(0);}
+
+100%{
+transform:rotateX(180deg) rotateY(180deg) rotate(180deg);
+
+}
+
+}
+.progress-bar{
+z-index:-1;
+position:absolute;
+top:80%;
+left:50%;
+translate:-50% -80%;
+width:50%;
+height:20px;
+border-radius:20px;
+overflow:hidden;
+border:1px solid aqua;
+padding:6px;
+}
+.progress-bar .progress{
+
+height:100%;
+background-color:aqua;
+box-shadow:0 0 8px aqua;
+border-radius:15px;
+animation:animate 15s linear forwards;
+
+}
